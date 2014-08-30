@@ -1,193 +1,277 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Seu nome aqui</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <!-- Bootstrap -->
+    <link  rel="stylesheet" href="assets/css/bootstrap.min.css">
+
 </head>
 <body>
+  <div class="container">
+    <h1>Instruções</h1>
+      <hr>
+      <blockquote>
+        <p>
+          Essa página é um "questionário" HTML onde você deverá responder via hardcode. Por
+          exemplo, ali no campo de email, eu adicionaria no código HTML o atributo
+          value="harlley arroba gmail ponto com". E no campo idade, adicionaria o atributo
+          value="33". Se for uma resposta de checkbox, adicionaria o atributo checked.
+          Bem, se você sabe HTML, entendeu a ideia.
+        </p>
+      </blockquote>
 
-	<h1>Instruções</h1>
-	<p>
-	Essa página é um "questionário" HTML onde você deverá responder via hardcode. Por
-	exemplo, ali no campo de email, eu adicionaria no código HTML o atributo 
-	value="harlley arroba gmail ponto com". E no campo idade, adicionaria o atributo
-	value="33". Se for uma resposta de checkbox, adicionaria o atributo checked.
-	Bem, se você sabe HTML, entendeu a ideia.
-	</p>
+      <hr>
+      <blockquote>
+        <p>
+          A primeira seção <strong>"Sobre você"</strong> é tranquilo, basta responder todas as questões.
+          Já na segunda seção, do <strong>"Mini-teste"</strong>, você primeiro deve colocar uma nota de 0
+          a 10 sobre o seu conhecimento em cada um dos assuntos. Depois deve marcar
+          os checkboxes. A ideia é que você marque apenas as opções que tem algum
+          relacionamento com a tecnologia. Por exemplo, se a tecnologia fosse "Banana",
+          você marcaria "fruta" e "casca", e deixaria desmarcado a opção "sementes".
+        </p>
+      </blockquote>
 
-	<p>
-		A primeira seção <strong>"Sobre você"</strong> é tranquilo, basta responder todas as questões. 
-		Já na segunda seção, do <strong>"Mini-teste"</strong>, você primeiro deve colocar uma nota de 0
-		a 10 sobre o seu conhecimento em cada um dos assuntos. Depois deve marcar
-		os checkboxes. A ideia é que você marque apenas as opções que tem algum
-		relacionamento com a tecnologia. Por exemplo, se a tecnologia fosse "Banana", 
-		você marcaria "fruta" e "casca", e deixaria desmarcado a opção "sementes".
-	</p>
+      <hr>
+      <blockquote>
+        <p>
+          Depois de responder o questionário, é hora deixá-lo bonitão. Já que você
+          conhece Frontend, vai ser tranquilo. Basta criar um arquivo CSS, linkar aqui
+          no HTML e estilizar da forma que preferir, use o seu bom gosto. CSS3 é mais que
+          bem vindo. Se precisar mudar alguma estrutura do HTML, deixar mais semântico, etc,
+          tudo bem, mantenha só os seus campos com as respostas, para que eu consiga ler
+          depois que estiver publicado. Pode adicionar Javascript também, tudo que fizer
+          para demonstrar os seus conhecimentos, vai te ajudar.
+        </p>
+      </blockquote>
+      <hr>
 
-	<p>Depois de responder o questionário, é hora deixá-lo bonitão. Já que você
-		conhece Frontend, vai ser tranquilo. Basta criar um arquivo CSS, linkar aqui 
-		no HTML e estilizar da forma que preferir, use o seu bom gosto. CSS3 é mais que 
-		bem vindo. Se precisar mudar alguma estrutura do HTML, deixar mais semântico, etc, 
-		tudo bem, mantenha só os seus campos com as respostas, para que eu consiga ler 
-		depois que estiver publicado. Pode adicionar Javascript também, tudo que fizer 
-		para demonstrar os seus conhecimentos, vai te ajudar.
-	</p>
+      <blockquote>
+        <p>
+          O último passo é o envio do seu questionário/teste para eu avaliar. Basta
+          publicar os arquivo em algum servidor, e informar a URL aqui no formulário.
+          É importante também que me envie um Pull Request, para que eu veja o seu código.
+          Aqui no Beved, sabemos o andamento do trabalho de cada um através dos commits.
+          Portanto, capriche, pois o seu histórico de commits será avaliado.
+        <p>
 
-	<p>
-		O último passo é o envio do seu questionário/teste para eu avaliar. Basta
-		publicar os arquivo em algum servidor, e informar a URL aqui no formulário.
-		É importante também que me envie um Pull Request, para que eu veja o seu código.
-		Aqui no Beved, sabemos o andamento do trabalho de cada um através dos commits. 
-		Portanto, capriche, pois o seu histórico de commits será avaliado.
-	<p>
+      </blockquote>
 
+      <hr>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#sobre-vc" data-toggle="tab">Sobre você</a></li>
+      <li><a href="#conhecimentos" data-toggle="tab">Mini-teste de Conhecimentos</a></li>
+      <li><a href="#entrega" data-toggle="tab">Entrega</a></li>
+    </ul>
 
-	<fieldset>
-    
-    <legend>Sobre você</legend>
+    <!-- Tab panes -->
+    <div class="tab-content">
 
-		<h1>Email</h1>
-		<input type="text" style="width:700px">
+      <div class="tab-pane active" id="sobre-vc">
+        <form class="form-horizontal" rule="form">
+          <div class="form-group">
+            <label><h2>Sobre você</h2></label>
+          </div>
+          <div class="form-group">
+            <label><h3>Email :</h3></label>
+            <input type="text" class="form-control" value="alexandrerpsantos@gmail.com">
+          </div>
+          <div class="form-group">
+            <label><h3>Idade :</h3></label>
+            <input type="text" class="form-control" value="38">
+          </div>
 
-		<h1>Idade</h1>
-		<input type="text" style="width:700px">
+          <div class="form-group">
+            <label><h3>Escolha o valor da sua bolsa estágio :</h3></label><br>
+            <input type="radio" name="bolsa"><label>R$ 300,00</label><br>
+            <input type="radio" name="bolsa"><label>R$ 600,00</label><br>
+            <input type="radio" name="bolsa" checked="checked"><label>R$ 1.200,00</label><br>
+            <input type="radio" name="bolsa"><label>R$ 3.000,00</label><br>
+            <input type="radio" name="bolsa"><label>Na Beved? Trabalharia até de graça!</label>
+          </div>
 
-		<h1>Escolha o valor da sua bolsa estágio</h1>
-		<input type="radio" name="bolsa"><label>R$ 300,00</label>
-		<input type="radio" name="bolsa"><label>R$ 600,00</label>
-		<input type="radio" name="bolsa"><label>R$ 1.200,00</label>
-		<input type="radio" name="bolsa"><label>R$ 3.000,00</label>
-		<input type="radio" name="bolsa"><label>Na Beved? Trabalharia até de graça!</label>
-		
-		<h1>Usa qual IDE?</h1>
-		<input type="radio" name="ide"><label>Textmate</label>
-		<input type="radio" name="ide"><label>Sublime</label>
-		<input type="radio" name="ide"><label>Vim</label>
-		<input type="radio" name="ide"><label>Outra</label>
+          <div class="form-group">
+            <h3>Usa qual IDE?</h3>
+            <input type="radio" name="ide"><label>Textmate</label><br>
+            <input type="radio" name="ide" checked="checked"><label>Sublime</label><br>
+            <input type="radio" name="ide"><label>Vim</label><br>
+            <input type="radio" name="ide"><label>Outra</label>
+          </div>
 
-		<h1>Qual máquina?</h1>
-		<input type="radio" name="maquina"><label>Windows</label>
-		<input type="radio" name="maquina"><label>Linux</label>
-		<input type="radio" name="maquina"><label>Mac</label>
+          <div class="form-group">
+            <h3>Qual máquina?</h3>
+            <input type="radio" name="maquina"><label>Windows</label><br>
+            <input type="radio" name="maquina"><label>Linux</label><br>
+            <input type="radio" name="maquina" checked="checked"><label>Mac</label>
+          </div>
 
-		<h1>Qual browser?</h1>
-		<input type="radio" name="browser"><label>Firefox</label>
-		<input type="radio" name="browser"><label>Chrome</label>
-		<input type="radio" name="browser"><label>Internet Explorer</label>
-		<input type="radio" name="browser"><label>Safari</label>
-		<input type="radio" name="browser"><label>Outro</label>
+          <div class="form-group">
+            <h3>Qual browser?</h3>
+            <input type="radio" name="browser"><label>Firefox</label><br>
+            <input type="radio" name="browser" checked="checked"><label>Chrome</label><br>
+            <input type="radio" name="browser"><label>Internet Explorer</label><br>
+            <input type="radio" name="browser"><label>Safari</label><br>
+            <input type="radio" name="browser"><label>Outro</label>
+          </div>
 
-		<h1>Velocidade da conexão com a internet</h1>
-		<input type="text" style="width:700px">
+          <div class="form-group">
+            <h3>Velocidade da conexão com a internet</h3>
+            <input type="text" class="form-control" value="20 Mg">
+          </div>
 
-		<h1>Inglês</h1>
-		<input type="checkbox"><label>Leitura técnica</label><br>
-		<input type="checkbox"><label>Escrita: Consigo perguntar e responder em fóruns</label><br>
-		<input type="checkbox"><label>Conversação fluente</label><br>
-		<input type="checkbox"><label>Entendo vídeos de cursos e palestras sem legenda</label><br>
-		<input type="checkbox"><label>Google Translate Master</label><br>
-		<input type="checkbox"><label>The books is on the table</label>
+          <div class="form-group">
+            <h3>Inglês :</h3>
+            <input type="radio" checked="checked"><label>Leitura técnica</label><br>
+            <input type="radio"><label>Escrita: Consigo perguntar e responder em fóruns</label><br>
+            <input type="radio"><label>Conversação fluente</label><br>
+            <input type="radio"><label>Entendo vídeos de cursos e palestras sem legenda</label><br>
+            <input type="radio" checked="checked"><label>Google Translate Master</label><br>
+            <input type="radio"><label>The books is on the table</label><br>
+          </div>
 
-		<h1>Links onde aprendeu sobre Frontend e Ruby on Rails</h1>
-		<textarea rows="10" cols="98"></textarea>
+          <h3>Links onde aprendeu sobre Frontend e Ruby on Rails</h3>
+          <textarea rows="10" cols="98">
+            - http://www.egenial.com.br/
+            - http://www.edukee.com/
+            - https://www.ruby-lang.org/pt/
+            - http://www.superquadra.co/cursos/rails-para-designers
+            - http://guias.rubyonrails.com.br.s3-website-us-east-1.amazonaws.com/
+            - http://railsforzombies.org/
+            - http://tryruby.org/
+            - www.codeschool.com
+          </textarea>
 
-		<h1>Links de sites/apps que criou com o que aprendeu nos links acima</h1>
-		<textarea rows="10" cols="98"></textarea>
+          <h3>Links de sites/apps que criou com o que aprendeu nos links acima</h3>
+          <textarea rows="10" cols="98">
+            Ainda nenhum. Fiquei alguns anos trabalhando com Redes e Servidores
+            Linux.
+          </textarea>
 
-		<h1>Quando o bicho pega, onde procura ajuda? Mande os links.</h1>
-		<textarea rows="10" cols="98"></textarea>
+          <h3>Quando o bicho pega, onde procura ajuda? Mande os links.</h3>
+          <textarea rows="10" cols="98">
+            - Google
+            - https://www.ruby-lang.org/pt/
+            - http://guides.rubyonrails.org/
+            - http://railscasts.com
+            - http://api.rubyonrails.org/
+          </textarea>
 
-		<h1>Qual o seu Facebook?</h1>
-		<input type="text" style="width:700px">
+          <h3>Qual o seu Facebook?</h3>
+          <input type="text" class="form-control" value="https://www.facebook.com/alexandre.l.santos.3">
 
-		<h1>Qual o seu Twitter?</h1>
-		<input type="text" style="width:700px">
+          <h3>Qual o seu Twitter?</h3>
+          <input type="text" class="form-control" value="@alex_luiz">
 
-		<h1>Qual o seu Linkedin?</h1>
-		<input type="text" style="width:700px">
+          <h3>Qual o seu Linkedin?</h3>
+          <input type="text" class="form-control" value="Alexandre Luiz dos Santos">
 
-		
-		<h1>Link do último livro que leu</h1>
-		<input type="text" style="width:700px">
+          <h3>Link do último livro que leu</h3>
+          <input type="text" class="form-control" value="Ruby on Rails. Coloque sua aplicação nos trilhos.">
 
-		<h1>Link da última série ou filme que assistiu</h1>
-		<input type="text" style="width:700px">
+          <h3>Link da última série ou filme que assistiu</h3>
+          <input type="text" class="form-control" value="Lie to me, Hemlock grove, Breaking bad.">
+        </form>
+      </div>
 
-	</fieldset>
+      <div class="tab-pane" id="conhecimentos">
+        <form role="form">
+          <h2>Mini-teste de Conhecimentos</h2>
+          <br>
+          <div class="form-group">
+            <h3>Ruby :</h3>
+            <input type="text" class="form-control" placeholder="Qual o seu conhecimento? de 0 a 10" value="6">
+            <br>
+            <input type="radio"><label>Matz</label><br>
+            <input type="radio"><label>Compilada</label><br>
+            <input type="radio" checked="checked"><label>Framework</label><br>
+            <input type="radio"><label>RVM</label><br>
+            <input type="radio" checked="checked"><label>obj = new Object()</label>
 
-	<fieldset>
-    
-    <legend>Mini-teste de Conhecimentos</legend>
+          </div>
 
-		<h1>Ruby <input type="text" style="width:200px" placeholder="Qual o seu conhecimento? de 0 a 10"></h1>
-		<input type="checkbox"><label>Matz</label>
-		<input type="checkbox"><label>Compilada</label>
-		<input type="checkbox"><label>Framework</label>
-		<input type="checkbox"><label>RVM</label>
-		<input type="checkbox"><label>obj = new Object()</label>
+          <div class="form-group">
+            <h3>Ruby on Rails <input type="text" class="form-control" placeholder="Qual o seu conhecimento? de 0 a 10" value="6"></h3><br>
+            <input type="checkbox"><label>MVC</label><br>
+            <input type="checkbox" checked="checked"  ><label>linguagem de programação</label><br>
+            <input type="checkbox"><label>DHH</label><br>
+            <input type="checkbox"><label>rake database:migrate</label><br>
+            <input type="checkbox"><label>JVM</label>
+          </div>
 
-		<h1>Ruby on Rails <input type="text" style="width:200px" placeholder="Qual o seu conhecimento? de 0 a 10"></h1>
-		<input type="checkbox"><label>MVC</label>
-		<input type="checkbox"><label>linguagem de programação</label>
-		<input type="checkbox"><label>DHH</label>
-		<input type="checkbox"><label>rake database:migrate</label>
-		<input type="checkbox"><label>JVM</label>
+          <div class="form-group">
+            <h3>Postgres <input type="text" class="form-control" placeholder="Qual o seu conhecimento? de 0 a 10" value="2"></h3><br>
+            <input type="checkbox"><label>Heroku</label><br>
+            <input type="checkbox" checked="checked"><label>Banco de Dados</label><br>
+            <input type="checkbox"><label>Framework</label><br>
+            <input type="checkbox" checked="checked"><label>sql</label><br>
+            <input type="checkbox"><label>psql</label>
+          </div>
 
-		<h1>Postgres <input type="text" style="width:200px" placeholder="Qual o seu conhecimento? de 0 a 10"></h1>
-		<input type="checkbox"><label>Heroku</label>
-		<input type="checkbox"><label>Banco de Dados</label>
-		<input type="checkbox"><label>Framework</label>
-		<input type="checkbox"><label>sql</label>
-		<input type="checkbox"><label>psql</label>
+          <div class="form-group">
+            <h3>HTML5 <input type="text" class="form-control" placeholder="Qual o seu conhecimento? de 0 a 10" value="4"></h3><br>
+            <input type="checkbox" checked="checked"><label>video</label><br>
+            <input type="checkbox"><label>Microsoft</label><br>
+            <input type="checkbox"><label>podcast</label><br>
+            <input type="checkbox" checked="checked"><label>article</label><br>
+            <input type="checkbox"><label>marquee</label>
+          </div>
 
-		<h1>HTML5 <input type="text" style="width:200px" placeholder="Qual o seu conhecimento? de 0 a 10"></h1>
-		<input type="checkbox"><label>&lt;video&gt;</label>
-		<input type="checkbox"><label>Microsoft</label>
-		<input type="checkbox"><label>&lt;podcast&gt;</label>
-		<input type="checkbox"><label>&lt;article&gt;</label>
-		<input type="checkbox"><label>&lt;marquee&gt;</label>
+          <div class="form-group">
+            <h3>CSS3 <input type="text" class="form-control" placeholder="Qual o seu conhecimento? de 0 a 10" value="4"></h3>
+            <input type="checkbox"><label>shadow</label><br>
+            <input type="checkbox" checked="checked"><label>Sass</label><br>
+            <input type="checkbox"><label>#60z3d0</label><br>
+            <input type="checkbox"><label>border-rounded:10px;</label><br>
+            <input type="checkbox"><label>Modernizr</label><br>
+          </div>
 
-		<h1>CSS3 <input type="text" style="width:200px" placeholder="Qual o seu conhecimento? de 0 a 10"></h1>
-		<input type="checkbox"><label>shadow</label>
-		<input type="checkbox"><label>Sass</label>
-		<input type="checkbox"><label>#60z3d0</label>
-		<input type="checkbox"><label>border-rounded:10px;</label>
-		<input type="checkbox"><label>Modernizr</label>
+          <div class="form-group">
+            <h3>Javascript <input type="text" class="form-control" placeholder="Qual o seu conhecimento? de 0 a 10" value="4"></h3>
+            <input type="checkbox"><label>Backbone</label>
+            <input type="checkbox"><label>Java</label><br>
+            <input type="checkbox"><label>var obj = new Object();</label><br>
+            <input type="checkbox" checked="checked"><label>Firebug</label><br>
+            <input type="checkbox" checked="checked"><label>v8</label>
+          </div>
 
-		<h1>Javascript <input type="text" style="width:200px" placeholder="Qual o seu conhecimento? de 0 a 10"></h1>
-		<input type="checkbox"><label>Backbone</label>
-		<input type="checkbox"><label>Java</label>
-		<input type="checkbox"><label>var obj = new Object();</label>
-		<input type="checkbox"><label>Firebug</label>
-		<input type="checkbox"><label>v8</label>
+          <div class="form-group">
+          <label><h3>Qual controle de versão já usou?</h3><label>
+          <input type="checkbox"><label>Source Safe</label>
+          <input type="checkbox"><label>Mercurial</label>
+          <input type="checkbox" checked="checked"><label>Git</label>
+          <input type="checkbox" checked="checked"><label>CVS</label>
+          <input type="checkbox" checked="checked"><label>SVN</label>
+          <input type="checkbox"><label>Renomeio a pasta com _OLD</label>
+        </div>
+        </form>
+      </div>
 
-		<h1>Qual controle de versão já usou?</h1>
-		<input type="checkbox"><label>Source Safe</label>
-		<input type="checkbox"><label>Mercurial</label>
-		<input type="checkbox"><label>Git</label>
-		<input type="checkbox"><label>CVS</label>
-		<input type="checkbox"><label>SVN</label>
-		<input type="checkbox"><label>Renomeio a pasta com _OLD</label>
+      <div class="tab-pane" id="entrega">
+        <label><h2>Entrega</h2></label>
 
-	</fieldset>
+        <label><h3>Checklist - Só pra te ajudar :)</h3></label>
+        <div class="form-group">
+          <input type="checkbox"><label>Fork</label><br>
+          <input type="checkbox"><label>Novo branch</label><br>
+          <input type="checkbox" checked="checked"><label>Respostas hardcode</label><br>
+          <input type="checkbox" checked="checked"><label>Personalização com CSS e Javascript</label><br>
+          <input type="checkbox"><label>Pull request</label><br>
+          <input type="checkbox"><label>Publicação do formulário em algum servidor</label>
+        </div>
 
-	<fieldset>
-    <legend>Entrega</legend>
+        <label><h3>Link de onde você publicou o questionário</h3></label>
+        <input type="text" class="form-control">
 
-		<h1>Checklist - Só pra te ajudar :)</h1>
-		<input type="checkbox"><label>Fork</label><br>
-		<input type="checkbox"><label>Novo branch</label><br>
-		<input type="checkbox"><label>Respostas hardcode</label><br>
-		<input type="checkbox"><label>Personalização com CSS e Javascript</label><br>
-		<input type="checkbox"><label>Pull request</label><br>
-		<input type="checkbox"><label>Publicação do formulário em algum servidor</label><br>
+      </div>
+      <br>
 
-		<h1>Link de onde você publicou o questionário</h1>
-		<input type="text" style="width:700px">
+    </div>
+  </div>
 
-	</fieldset>
-
-
-
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="assets/javascript/bootstrap.min.js" ></script>
 </body>
 </html>
