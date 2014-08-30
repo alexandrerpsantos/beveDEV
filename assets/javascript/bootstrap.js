@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*!
  * Bootstrap v3.2.0 (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter, Inc.
@@ -2112,3 +2113,6 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
   })
 
 }(jQuery);
+=======
+bootstrap.js
+>>>>>>> b00ac679b534be541a9bf968b0cb0ca939844b5f
